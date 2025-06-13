@@ -1,5 +1,11 @@
-import { SAPIntegrationDashboard } from "@/components/sap-integration-dashboard"
+import { SAPIntegrationDashboard } from "@/components/sap-integration-dashboard";
+import { MainLayout } from "@/components/main-layout"; // Import the main layout
 
 export default function SAPIntegrationPage() {
-  return <SAPIntegrationDashboard />
+  return (
+    // Wrap the component in the MainLayout
+    <MainLayout activeTab="sap" children={undefined}>
+      <SAPIntegrationDashboard />
+    </MainLayout>
+  );
 }

@@ -1,5 +1,11 @@
-import { SAPVehicleSync } from "@/components/sap-vehicle-sync"
+import { SAPVehicleSync } from "@/components/sap-vehicle-sync";
+import { MainLayout } from "@/components/main-layout"; // Import the main layout
 
 export default function SAPVehicleSyncPage() {
-  return <SAPVehicleSync />
+  return (
+    // Wrap the component in the MainLayout
+    <MainLayout activeTab="sap-vehicles" children={undefined}>
+      <SAPVehicleSync />
+    </MainLayout>
+  );
 }
